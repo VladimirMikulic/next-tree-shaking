@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import { Input } from '../components/common/inputs';
+import { Select } from '../components/common/inputs';
 import styles from '../styles/Home.module.css';
 
-const Home: NextPage = () => {
+const Test: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -17,14 +17,14 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
-        <Input value="asd" />
-
+        <Select
+          options={[{ text: 'asd', isActive: true }]}
+          onChange={() => null}
+        />
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
-
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
@@ -72,4 +72,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Test;
